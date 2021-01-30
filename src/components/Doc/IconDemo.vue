@@ -65,13 +65,7 @@
 
   </div>
   <!-- right -->
-  <div class="right">
-    <div class="demo-nav">
-      <div class="demo-nav__title">Icon</div>
-      <div class="demo-nav__back">
-        <bb-icon name='left' size='27px'></bb-icon>
-      </div>
-    </div>
+  <DemoModel title='Icon'>
     <!-- tab -->
     <bb-tabs v-model:active="active">
       <bb-tab title="用法示例">
@@ -109,19 +103,22 @@
       <bb-tab title="线框风格">线框风格</bb-tab>
       <bb-tab title="实底风格">实底风格</bb-tab>
     </bb-tabs>
-  </div>
+  </DemoModel>
 </template>
 
 <script lang='ts'>
 import bbIcon from "../../lib/Icon.vue"
 import bbTabs from "../../lib/Tabs.vue"
 import bbTab from "../../lib/Tab.vue"
+import DemoModel from "../Common/demoModel.vue"
+
 import { ref } from "vue"
 export default {
   components: {
     bbIcon,
     bbTabs,
-    bbTab
+    bbTab,
+    DemoModel
   },
   setup() {
     const active = ref(0)
