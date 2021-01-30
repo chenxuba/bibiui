@@ -8,7 +8,9 @@
           <span class="bb-tab__text bb-tab__text--ellipsis">{{item}}</span>
         </div>
         <!-- bb-tabs__line -->
-        <div class="bb-tabs__line" style="transition-duration: 0.3s;" :style="styleObject">
+        <!-- <div class="bb-tabs__line" style="transition-duration: 0.3s;" :style="styleObject">
+        </div> -->
+        <div class="bb-tabs__line" style="transition: .25s cubic-bezier(1,1.67,.21,.84);" :style="styleObject">
         </div>
       </div>
     </div>
