@@ -30,12 +30,12 @@ export default {
   },
   setup() {
     const list = reactive([
+      { url: "/doc/icon", name: "Icon 图标" },
       { url: "/doc/button", name: "Button 按钮" },
       { url: "/doc/switch", name: "Switch 开关" },
       { url: "/doc/dialog", name: "Dialog 弹出框" },
       { url: "/doc/tab", name: "Tab 标签页" },
       { url: "/doc/cell", name: "Cell 单元格" },
-      { url: "/doc/icon", name: "Icon 图标" },
       { url: "/doc/field", name: "Field 输入框" }
     ])
     return { list }
