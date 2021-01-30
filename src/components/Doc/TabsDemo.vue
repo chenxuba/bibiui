@@ -93,11 +93,10 @@
       <h2 class="bb-doc-demo-block__title">基础用法</h2>
       <div class="demo-button-row">
         <bb-Tabs v-model:active='active'>
-          <bb-Tab title='标签一'>内容1</bb-Tab>
-          <bb-Tab title='标签二'>内容2</bb-Tab>
-          <bb-Tab title='标签三'>内容3</bb-Tab>
-          <bb-Tab title='标签四'>内容4</bb-Tab>
-          <bb-Tab title='标签五'>内容5</bb-Tab>
+          <bb-tab title='写死的标签'>我是写死的tab</bb-tab>
+          <bb-tab v-for="(a,i) in 3" :key="i" :title="'循环标签'+i">
+            {{i}}我是循环出来的tab
+          </bb-tab>
         </bb-Tabs>
       </div>
     </div>

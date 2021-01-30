@@ -65,18 +65,39 @@ export default {
     /**
      * 验证子标签合法性
      */
-    const defaults = context.slots.default()
-    defaults.forEach(tag => {
+    const defaultss = context.slots.default()
+    let defaults = reactive([])
+    defaultss.forEach(tag => {
+      if (tag.props == null) {
+        defaults = defaults.concat(tag.children)
+      } else {
+        defaults.push(tag)
+      }
+    })
+    // 得出所有的标签
+    // console.log(defaults)
+    // defaults.forEach(tag => {
+    //   if (tag.type !== Tab) {
+    //     throw new Error("Tabs 子标签必须是bb-Tab")
+    //   }
+    // })
+    for (let index = 0; index < defaults.length; index++) {
+      const tag = defaults[index]
       if (tag.type !== Tab) {
         throw new Error("Tabs 子标签必须是bb-Tab")
       }
-    })
+    }
     /**
      * 获取tab标签名
      */
-    const titles = defaults.map(tag => {
-      return tag.props.title
-    })
+    // const titles = defaults.map(tag => {
+    //   return tag.props.title
+    // })
+    const titles = reactive([])
+    for (let index = 0; index < defaults.length; index++) {
+      const tag = defaults[index]
+      titles.push(tag.props.title)
+    }
     /**
      * 动态绑定style，改变小横条的样式
      */
