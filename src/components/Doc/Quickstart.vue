@@ -48,6 +48,42 @@
         <p>app.use(bibiUI);</p>
       </div>
     </div>
+    <div class="card desc">
+      <h2>方式二.按需引入所需组件 ( 推荐！！！)</h2>
+      <p>Bibi-ui 支持按需引入所需组件，不用安装任何插件。在 <span style="color:red">src</span> 目录下创建 <span style="color:red">plugins/bibi-ui.js</span></p>
+      <div class="pre">
+        <p><span style="color:#8080ff;">import</span> { createApp } <span style="color:#8080ff;">from</span> <span style="color:#4fc08d">'vue'</span>
+          ;</p>
+        <p><span style="color:#8080ff;">import</span> bibiUI <span style="color:#8080ff;">from</span> <span
+            style="color:#4fc08d">'@/plugins/bibi-ui'</span>;</p>
+        <p><span style="color:#8080ff;">const</span> app = createApp();</p>
+        <p>app.use(bibiUI);</p>
+      </div>
+      <p><span style="color:red">plugins/bibi-ui.js</span> 写法如下</p>
+
+      <div class="pre">
+        <p><span style="color:#8080ff;">import</span> { bbButton, bbTabs, bbTab } <span style="color:#8080ff;">from</span> <span
+            style="color:#4fc08d">'bibi-ui'</span></p>
+        <p><span style="color:#8080ff;">import</span> <span style="color:#4fc08d">'bibi-ui/dist/lib/bibiUI.css' </span> </p>
+        <p> <span style="color:#8080ff;">export default</span> { </p>
+        <p><span style="color:#8080ff;"> install</span>: (app) => {</p>
+        <p>&nbsp;&nbsp;&nbsp; <span style="color:#8080ff;">app.component</span>("bbButton", bbButton);</p>
+        <p>&nbsp;&nbsp;&nbsp; <span style="color:#8080ff;">app.component</span>("bbTabs", bbTabs);</p>
+        <p>&nbsp;&nbsp;&nbsp; <span style="color:#8080ff;">app.component</span>("bbTab", bbTab);</p>
+        <p>&nbsp;&nbsp;}</p>
+        <p>};</p>
+        <!-- import { bbButton, bbTabs, bbTab } from "bibi-ui";
+        import 'bibi-ui/dist/lib/bibiUI.css'
+        export default {
+            install: (app) => {
+                app.component("bbButton", bbButton);
+                app.component("bbTabs", bbTabs);
+                app.component("bbTab", bbTab);
+            },
+        }; -->
+      </div>
+
+    </div>
   </div>
   <RightNav></RightNav>
 </template>
