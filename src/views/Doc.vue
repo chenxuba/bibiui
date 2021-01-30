@@ -4,11 +4,11 @@
       <LeftNav />
     </aside>
     <!-- 展开收起按钮 -->
-    <div class="flag" @click="changeFlag">
+    <!-- <div class="flag" @click="changeFlag">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </div> -->
     <main>
       <router-view />
     </main>
@@ -61,8 +61,8 @@ export default {
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    bottom: 15px;
-    left: 10px;
+    top: 50px;
+    left: 0px;
     cursor: pointer;
     span {
       display: inline-block;

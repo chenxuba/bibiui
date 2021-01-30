@@ -46,7 +46,8 @@ export default {
       { url: "/doc/dialog", name: "Dialog 弹出框" },
       { url: "/doc/tab", name: "Tab 标签页" },
       { url: "/doc/cell", name: "Cell 单元格" },
-      { url: "/doc/field", name: "Field 输入框" }
+      { url: "/doc/field", name: "Field 输入框" },
+      { url: "/doc/search", name: "Search 搜索" }
     ])
     return { list1 }
   }

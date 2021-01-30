@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .bb-field__label {
   flex: none !important;
   box-sizing: border-box;
@@ -62,7 +62,11 @@ export default {
   overflow: visible;
   width: 100%;
   .bb-field__body {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
     align-items: center;
     height: 100%;
     .bb-field__control {
