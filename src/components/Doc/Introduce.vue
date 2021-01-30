@@ -44,9 +44,6 @@ export default {
 
 <style lang="scss" scoped>
 .flex {
-  // display: flex;
-  // justify-content: space-between;
-  // height: 100%;
   .left {
     padding-right: 360px;
     .card {
@@ -88,9 +85,5 @@ export default {
       }
     }
   }
-}
-// 去除滚动条
-::-webkit-scrollbar {
-  width: 0px;
 }
 </style>

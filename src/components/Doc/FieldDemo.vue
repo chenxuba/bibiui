@@ -34,8 +34,6 @@ export default {
 
 <style lang="scss" scoped>
 .bb-doc-demo-block {
-  // padding: 10px 20px 0 20px;
-  // background: #fff;
   .demo-button-row {
     margin-bottom: 15px;
     > span {

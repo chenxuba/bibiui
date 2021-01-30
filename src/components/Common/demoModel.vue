@@ -29,7 +29,8 @@ export default {
   box-shadow: 0 8px 12px #ebedf0;
   box-sizing: border-box;
   min-height: 500px;
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   position: fixed;
   top: 25px;
   right: 20px;
@@ -72,5 +73,9 @@ export default {
       cursor: pointer;
     }
   }
+}
+// 去除滚动条
+::-webkit-scrollbar {
+  width: 0px;
 }
 </style>
