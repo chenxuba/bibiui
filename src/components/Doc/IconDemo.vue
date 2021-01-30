@@ -12,56 +12,18 @@
       <p>请参考 <router-link to="/doc/quickstart" style="color:#398af2;text-decoration: none;">快速上手</router-link> 章节。</p>
     </div>
     <!-- 代码演示 -->
-    <div class="logo">
+    <!-- <div class="logo">
       <p class="intro p">
         代码演示
       </p>
-    </div>
+    </div> -->
     <!-- 基础用法 -->
-    <div class="card desc">
+    <!-- <div class="card desc">
       <h2>基础用法</h2>
       <p>通过 <span style="padding:2px 5px;background:#f7f8fa;">v-model:active</span>绑定当前激活标签对应的active值。
       </p>
-      <div class="pre">
-        <pre>
-&lt;<span style="color:#4994df;">bb-Tabs v-model:active</span>=<span style="color:#4fc08d;">'active'</span>&gt;
-
-  &lt;<span style="color:#4994df;">bb-Tab title</span>=<span style="color:#4fc08d;">'标签一'</span>&gt;内容1&lt;/<span style="color:#4994df;">bb-Tab</span>&gt;
-
-  &lt;<span style="color:#4994df;">bb-Tab title</span>=<span style="color:#4fc08d;">'标签二'</span>&gt;内容2&lt;/<span style="color:#4994df;">bb-Tab</span>&gt;
-
-  &lt;<span style="color:#4994df;">bb-Tab title</span>=<span style="color:#4fc08d;">'标签三'</span>&gt;内容3&lt;/<span style="color:#4994df;">bb-Tab</span>&gt;
-
-  &lt;<span style="color:#4994df;">bb-Tab title</span>=<span style="color:#4fc08d;">'标签四'</span>&gt;内容4&lt;/<span style="color:#4994df;">bb-Tab</span>&gt;
-
-  &lt;<span style="color:#4994df;">bb-Tab title</span>=<span style="color:#4fc08d;">'标签五'</span>&gt;内容5&lt;/<span style="color:#4994df;">bb-Tab</span>&gt;
-
-&lt;/<span style="color:#4994df;">bb-Tabs</span>&gt;
-            </pre>
-      </div>
-      <div class="pre">
-        <pre>
-
-
-<span style="color:#8080ff;">export default</span> { 
-
-  <span style="color:#4994df;">setup</span>() {
-
-    <span style="color:#8080ff;">const</span> active = ref(<span style="color:#eb6f6f;">0</span>);
-
-    <span style="color:#8080ff;">return</span> { active };
-
-  },
-};
-        </pre>
-      </div>
-    </div>
+    </div> -->
     <!-- API -->
-    <div class="logo">
-      <p class="intro p">
-        API
-      </p>
-    </div>
 
   </div>
   <!-- right -->
