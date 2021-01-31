@@ -37,7 +37,8 @@ export default {
       { url: "/doc/tab", name: "Tab 标签页" },
       { url: "/doc/cell", name: "Cell 单元格" },
       { url: "/doc/field", name: "Field 输入框" },
-      { url: "/doc/search", name: "Search 搜索" }
+      { url: "/doc/search", name: "Search 搜索" },
+      { url: "/doc/navbar", name: "NavBar 导航栏" }
     ])
     return { list }
   }

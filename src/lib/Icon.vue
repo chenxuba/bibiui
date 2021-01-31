@@ -1,7 +1,7 @@
 <template>
   <i class="bb-icon" v-if="!isImageFlag" :class="iconName" :style="{color:color,fontSize:size,cursor:pointer?'pointer':'default'}" />
-  <i class="bb-icon" :style="{fontSize:size,cursor:pointer?'pointer':'default'}">
-    <img :src="name" v-if="isImageFlag" alt="" class="bb-icon__image">
+  <i class="bb-icon" v-if="isImageFlag" :style="{fontSize:size,cursor:pointer?'pointer':'default'}">
+    <img :src="name" alt="" class="bb-icon__image">
   </i>
 </template>
 
@@ -9,6 +9,9 @@
 import { computed } from "vue"
 export default {
   props: {
+    class: {
+      type: String
+    },
     name: {
       type: String,
       required: true
@@ -36,7 +39,10 @@ export default {
     const isImageFlag = isImage(props.name)
 
     const iconName = computed(() => {
-      return `bb-icon-${props.name}`
+      return {
+        [`bb-icon-${props.name}`]: props.name,
+        [props.class == "" ? "" : props.class]: props.class
+      }
     })
     return { iconName, isImageFlag }
   }

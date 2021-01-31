@@ -8,7 +8,7 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .bb-hairline,
 .bb-hairline--top,
 .bb-hairline--left,
