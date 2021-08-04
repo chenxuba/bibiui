@@ -12,18 +12,80 @@
       <p>请参考 <router-link to="/doc/quickstart" style="color:#398af2;text-decoration: none;">快速上手</router-link> 章节。</p>
     </div>
     <!-- 代码演示 -->
-    <!-- <div class="logo">
+    <div class="logo">
       <p class="intro p">
         代码演示
       </p>
-    </div> -->
+    </div>
     <!-- 基础用法 -->
-    <!-- <div class="card desc">
+    <div class="card desc">
       <h2>基础用法</h2>
-      <p>通过 <span style="padding:2px 5px;background:#f7f8fa;">v-model:active</span>绑定当前激活标签对应的active值。
+      <p>通过 <span style="padding:2px 5px;background:#f7f8fa;">name</span>属性来指定需要使用的图标，bibiUi 内置了一套图标库（见右侧示例），可以直接传入对应的名称来使用。
       </p>
-    </div> -->
+      <div class="pre">
+        <p>&lt;<span style="color:#4994df;">bb-icon name</span>=<span style="color:#4fc08d;">"msg-o"</span> /&gt;</p>
+      </div>
+    </div>
+    <!-- 图标颜色 -->
+    <div class="card desc">
+      <h2>图标颜色</h2>
+      <p>通过 <span style="padding:2px 5px;background:#f7f8fa;">color</span>属性来设置图标的颜色。
+      </p>
+      <div class="pre">
+        <p>&lt;<span style="color:#4994df;">bb-icon name</span>=<span style="color:#4fc08d;">"msg-o"</span> <span
+            style="color:#4994df;">color</span>=<span style="color:#4fc08d;">"#fe8130"</span> /&gt;</p>
+      </div>
+    </div>
+    <!-- 使用图片 URL -->
+    <div class="card desc">
+      <h2>使用图片 URL</h2>
+      <p>你也可以直接在 <span style="padding:2px 5px;background:#f7f8fa;">name</span>属性中传入一个图片 URL 来作为图标。
+      </p>
+      <div class="pre">
+        <p>&lt;<span style="color:#4994df;">bb-icon name</span>=<span style="color:#4fc08d;">"https://b.yzcdn.cn/vant/icon-demo-1126.png"</span> /&gt;
+        </p>
+      </div>
+    </div>
+    <!-- 图标大小 -->
+    <div class="card desc">
+      <h2>图标大小</h2>
+      <p>通过 <span style="padding:2px 5px;background:#f7f8fa;">size</span>属性来设置图标的尺寸大小，暂时只支持px单位且必须指定
+      </p>
+      <div class="pre">
+        <p>&lt;<span style="color:#4994df;">bb-icon name</span>=<span style="color:#4fc08d;">"msg-o"</span> <span style="color:#4994df;">
+            size</span>=<span style="color:#4fc08d;">"30px"</span> /&gt;
+        </p>
+      </div>
+    </div>
     <!-- API -->
+    <div class="logo">
+      <p class="intro p">
+        API
+      </p>
+    </div>
+    <div class="card desc">
+      <h2 class="api">Tabs Props</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>参数</th>
+            <th>说明</th>
+            <th>类型</th>
+            <th>默认值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item,index) in apiList" :key="index">
+            <td>{{item.a}}</td>
+            <td>{{item.b}}</td>
+            <td>
+              <em>{{item.c}}</em>
+            </td>
+            <td>{{item.d}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
   </div>
   <!-- right -->
@@ -74,7 +136,7 @@ import bbTabs from "../../lib/Tabs.vue"
 import bbTab from "../../lib/Tab.vue"
 import DemoModel from "../Common/demoModel.vue"
 
-import { ref } from "vue"
+import { ref, reactive } from "vue"
 export default {
   components: {
     bbIcon,
@@ -84,7 +146,12 @@ export default {
   },
   setup() {
     const active = ref(0)
-    return { active }
+    const apiList = reactive([
+      { a: "name", b: "图标名称或图片链接", c: "string", d: "-" },
+      { a: "color", b: "图标颜色", c: "string", d: "inherit" },
+      { a: "size", b: "图标大小，如 20px，必须携带单位 px	", c: "string", d: "32px" }
+    ])
+    return { active, apiList }
   }
 }
 </script>
